@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.startupEditor": "readme",
+    "explorer.compactFolders": false
+  }
+}
+
