@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="profileMessage" class="alert" hidden></div>
+
+        <section class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Profile Details</h2>
+              <p class="muted">Update contact information, academic details, address, and income data.</p>
+            </div>
+            <div id="verificationBadge"></div>
+          </div>
+
+          <form id="profileForm" class="form-stack">
+            <div class="grid two admin-only hidden">
+              <label class="input-group">
+                <span>Full Name</span>
+                <input type="text" name="fullName" id="fullName" />
+              </label>
+              <div></div>
+            </div>
+
+            <div class="grid two student-only">
+              <label class="input-group">
+                <span>First Name</span>
+                <input type="text" name="firstName" id="firstName" />
+              </label>
+              <label class="input-group">
+                <span>Last Name</span>
+                <input type="text" name="lastName" id="lastName" />
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label class="input-group">
+                <span>Email</span>
+                <input type="email" name="email" id="email" required />
+              </label>
+              <label class="input-group">
+                <span>Phone</span>
+                <input type="tel" name="phone" id="phone" required />
+              </label>
+            </div>
+
+            <div class="grid two student-only">
+              <label class="input-group">
+                <span>Date of Birth</span>
+                <input type="date" name="dob" id="dob" />
+              </label>
+              <label class="input-group">
+                <span>Roll Number</span>
+                <input type="text" name="rollNo" id="rollNo" />
+              </label>
+            </div>
+
+            <div class="grid three student-only">
+              <label class="input-group">
+                <span>Gender</span>
+                <input type="text" name="gender" id="gender" />
+              </label>
+              <label class="input-group">
+                <span>Category</span>
+                <input type="text" name="category" id="category" />
+              </label>
+              <label class="input-group">
+                <span>Annual Income</span>
+                <input type="number" name="annualIncome" id="annualIncome" min="0" />
+              </label>
+            </div>
+
+            <label class="input-group student-only">
+              <span>Address Line</span>
+              <input type="text" name="addressLine" id="addressLine" />
+            </label>
+
+            <div class="grid three student-only">
+              <label class="input-group">
+                <span>City</span>
+                <input type="text" name="city" id="city" />
+              </label>
+              <label class="input-group">
+                <span>State</span>
+                <input type="text" name="state" id="state" />
+              </label>
+              <label class="input-group">
+                <span>Postal Code</span>
+                <input type="text" name="postalCode" id="postalCode" />
+              </label>
+            </div>
+
+            <button class="btn primary" type="submit">Save Profile</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/profile.js"></script>
+  </body>
+</html>
+

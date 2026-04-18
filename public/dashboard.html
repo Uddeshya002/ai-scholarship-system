@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="dashboardMessage" class="alert" hidden></div>
+
+        <section class="summary-grid" id="summaryCards"></section>
+
+        <section class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Quick Actions</h2>
+              <p class="muted">Move quickly to the actions you noted in your project sketch.</p>
+            </div>
+          </div>
+          <div class="action-grid">
+            <a class="action-tile" href="apply.html">
+              <strong>Apply Now</strong>
+              <span>Submit a scholarship application with supporting documents.</span>
+            </a>
+            <a class="action-tile" href="applications.html">
+              <strong>View Status</strong>
+              <span>Check pending, approved, rejected, and paid applications.</span>
+            </a>
+            <a class="action-tile" href="profile.html">
+              <strong>Update Profile</strong>
+              <span>Edit personal details, income, address, and contact information.</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="content-grid two-column">
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Recent Applications</h2>
+                <p class="muted">Your latest scholarship submissions and their current status.</p>
+              </div>
+            </div>
+            <div id="recentApplications"></div>
+          </section>
+
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Open Scholarships</h2>
+                <p class="muted">A few scholarships that are currently open for new applications.</p>
+              </div>
+            </div>
+            <div class="card-grid compact" id="highlightedScholarships"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/dashboard.js"></script>
+  </body>
+</html>
+

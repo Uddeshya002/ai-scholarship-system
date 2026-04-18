@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Scholarship | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="applyMessage" class="alert" hidden></div>
+
+        <div class="content-grid two-column">
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Application Form</h2>
+                <p class="muted">Upload the supporting document and submit your scholarship request.</p>
+              </div>
+            </div>
+
+            <form id="applicationForm" class="form-stack">
+              <label class="input-group">
+                <span>Scholarship Name</span>
+                <select name="scholarshipId" id="scholarshipId" required></select>
+              </label>
+
+              <label class="input-group">
+                <span>Income Details</span>
+                <textarea
+                  name="incomeDetails"
+                  rows="5"
+                  placeholder="Write your annual income details and any supporting explanation."
+                  required
+                ></textarea>
+              </label>
+
+              <label class="input-group">
+                <span>Additional Notes</span>
+                <textarea
+                  name="notes"
+                  rows="4"
+                  placeholder="Optional comments for the admin panel."
+                ></textarea>
+              </label>
+
+              <label class="input-group">
+                <span>Upload Documents</span>
+                <input type="file" name="document" accept=".pdf,.png,.jpg,.jpeg" required />
+              </label>
+
+              <button class="btn primary" type="submit">Submit Application</button>
+            </form>
+          </section>
+
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Selected Scholarship</h2>
+                <p class="muted">Review the scholarship amount, category, deadline, and eligibility.</p>
+              </div>
+            </div>
+            <div id="selectedScholarshipPreview"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/apply.js"></script>
+  </body>
+</html>
+

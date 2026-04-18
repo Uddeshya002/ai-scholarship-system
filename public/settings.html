@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="settingsMessage" class="alert" hidden></div>
+
+        <div class="content-grid two-column">
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Change Password</h2>
+                <p class="muted">Update your login password from this settings page.</p>
+              </div>
+            </div>
+            <form id="passwordForm" class="form-stack">
+              <label class="input-group">
+                <span>Current Password</span>
+                <input type="password" name="currentPassword" required />
+              </label>
+              <label class="input-group">
+                <span>New Password</span>
+                <input type="password" name="newPassword" minlength="8" required />
+              </label>
+              <button class="btn primary" type="submit">Update Password</button>
+            </form>
+          </section>
+
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Security Question</h2>
+                <p class="muted">Keep your recovery details updated in case you forget your password.</p>
+              </div>
+            </div>
+            <p class="pill" id="currentSecurityQuestion">Current question: loading...</p>
+            <form id="securityQuestionForm" class="form-stack">
+              <label class="input-group">
+                <span>Current Password</span>
+                <input type="password" name="currentPassword" required />
+              </label>
+              <label class="input-group">
+                <span>New Security Question</span>
+                <select name="securityQuestion" id="settingsSecurityQuestion" required></select>
+              </label>
+              <label class="input-group">
+                <span>Answer</span>
+                <input type="text" name="securityAnswer" required />
+              </label>
+              <button class="btn primary" type="submit">Update Security Question</button>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/settings.js"></script>
+  </body>
+</html>
+

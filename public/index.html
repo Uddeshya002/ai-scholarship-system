@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScholarHub | Scholarship Management System</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell">
+      <section class="hero-panel">
+        <span class="eyebrow">Full Stack Project</span>
+        <h1>Scholarship Management System</h1>
+        <p class="lead">
+          Manage student registrations, scholarship listings, applications, approvals, and
+          payments from one clean workflow built with Node.js, MySQL, HTML, CSS, and JavaScript.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Student Flow</h3>
+            <p>Register, log in, browse scholarships, upload documents, and track application status.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Admin Flow</h3>
+            <p>Verify students, create scholarships, approve or reject applications, and mark payments.</p>
+          </article>
+          <article class="feature-card">
+            <h3>MySQL Ready</h3>
+            <p>Use the included SQL files directly inside MySQL Workbench on your `localhost:3306` server.</p>
+          </article>
+        </div>
+
+        <div class="credentials-panel">
+          <h2>Demo Credentials</h2>
+          <div class="credentials-grid">
+            <div>
+              <strong>Student</strong>
+              <p>`student@scholarhub.local`</p>
+              <p>`Student@123`</p>
+            </div>
+            <div>
+              <strong>Admin</strong>
+              <p>`admin@scholarhub.local`</p>
+              <p>`Admin@123`</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="tab-strip" id="authTabs">
+          <button class="tab-button active" data-target="loginPanel">Login</button>
+          <button class="tab-button" data-target="registerPanel">Register</button>
+          <button class="tab-button" data-target="forgotPanel">Forgot Password</button>
+        </div>
+
+        <div id="authMessage" class="alert" hidden></div>
+
+        <div class="tab-panel active" id="loginPanel">
+          <h2>Welcome back</h2>
+          <p class="muted">
+            Log in as a student or admin. The system automatically sends you to the correct dashboard.
+          </p>
+          <form id="loginForm" class="form-stack">
+            <label class="input-group">
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="name@example.com" required />
+            </label>
+            <label class="input-group">
+              <span>Password</span>
+              <input type="password" name="password" placeholder="Enter your password" required />
+            </label>
+            <button class="btn primary" type="submit">Login</button>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="registerPanel">
+          <h2>Create student account</h2>
+          <p class="muted">Register new students with your security question for password recovery.</p>
+          <form id="registerForm" class="form-stack">
+            <div class="grid two">
+              <label class="input-group">
+                <span>First Name</span>
+                <input type="text" name="firstName" required />
+              </label>
+              <label class="input-group">
+                <span>Last Name</span>
+                <input type="text" name="lastName" required />
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label class="input-group">
+                <span>Contact Number</span>
+                <input type="tel" name="phone" required />
+              </label>
+              <label class="input-group">
+                <span>Email ID</span>
+                <input type="email" name="email" required />
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label class="input-group">
+                <span>Password</span>
+                <input type="password" name="password" minlength="8" required />
+              </label>
+              <label class="input-group">
+                <span>Confirm Password</span>
+                <input type="password" name="confirmPassword" minlength="8" required />
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label class="input-group">
+                <span>Security Question</span>
+                <select name="securityQuestion" id="registerSecurityQuestion" required></select>
+              </label>
+              <label class="input-group">
+                <span>Answer</span>
+                <input type="text" name="securityAnswer" required />
+              </label>
+            </div>
+
+            <button class="btn primary" type="submit">Register Account</button>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="forgotPanel">
+          <h2>Reset password</h2>
+          <p class="muted">Use your saved security question and answer to set a new password.</p>
+          <form id="forgotForm" class="form-stack">
+            <label class="input-group">
+              <span>Email Address</span>
+              <input type="email" name="email" required />
+            </label>
+            <label class="input-group">
+              <span>Security Question</span>
+              <select name="securityQuestion" id="forgotSecurityQuestion" required></select>
+            </label>
+            <label class="input-group">
+              <span>Answer</span>
+              <input type="text" name="securityAnswer" required />
+            </label>
+            <label class="input-group">
+              <span>New Password</span>
+              <input type="password" name="newPassword" minlength="8" required />
+            </label>
+            <button class="btn primary" type="submit">Reset Password</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="assets/js/auth.js"></script>
+  </body>
+</html>
+

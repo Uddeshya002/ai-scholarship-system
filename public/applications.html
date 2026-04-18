@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Applications | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="applicationsMessage" class="alert" hidden></div>
+        <section class="summary-grid" id="applicationSummary"></section>
+
+        <section class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Application Table</h2>
+              <p class="muted">Pending, approved, rejected, and payment details are shown here.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Application No</th>
+                  <th>Scholarship</th>
+                  <th>Status</th>
+                  <th>Payment</th>
+                  <th>Amount</th>
+                  <th>Submitted</th>
+                  <th>Document</th>
+                </tr>
+              </thead>
+              <tbody id="applicationsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/applications.js"></script>
+  </body>
+</html>
+

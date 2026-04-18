@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarships | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="scholarshipMessage" class="alert" hidden></div>
+
+        <section class="section-card">
+          <form id="filterForm" class="toolbar">
+            <label class="input-group grow">
+              <span>Search</span>
+              <input type="search" name="search" placeholder="Search scholarship name or eligibility" />
+            </label>
+            <label class="input-group">
+              <span>Category</span>
+              <select name="category" id="filterCategory"></select>
+            </label>
+            <label class="input-group">
+              <span>Income Filter</span>
+              <input type="number" name="income" placeholder="Annual income" min="0" />
+            </label>
+            <button class="btn secondary" type="submit">Apply Filters</button>
+          </form>
+        </section>
+
+        <section class="card-grid" id="scholarshipCards"></section>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/scholarships.js"></script>
+  </body>
+</html>
+

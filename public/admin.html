@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | ScholarHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content">
+        <header id="pageHeader"></header>
+        <div id="adminMessage" class="alert" hidden></div>
+
+        <section class="summary-grid" id="adminSummary"></section>
+
+        <div class="content-grid two-column">
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Create Scholarship</h2>
+                <p class="muted">Add new scholarships so they appear on the student scholarship page.</p>
+              </div>
+            </div>
+
+            <form id="scholarshipForm" class="form-stack">
+              <label class="input-group">
+                <span>Scholarship Name</span>
+                <input type="text" name="name" required />
+              </label>
+              <div class="grid two">
+                <label class="input-group">
+                  <span>Amount</span>
+                  <input type="number" name="amount" min="0" required />
+                </label>
+                <label class="input-group">
+                  <span>Category</span>
+                  <select name="category" id="adminCategory"></select>
+                </label>
+              </div>
+              <label class="input-group">
+                <span>Description</span>
+                <textarea name="description" rows="4" required></textarea>
+              </label>
+              <label class="input-group">
+                <span>Eligibility Criteria</span>
+                <textarea name="eligibilityCriteria" rows="4" required></textarea>
+              </label>
+              <div class="grid two">
+                <label class="input-group">
+                  <span>Max Income</span>
+                  <input type="number" name="maxIncome" min="0" />
+                </label>
+                <label class="input-group">
+                  <span>Deadline</span>
+                  <input type="date" name="deadline" />
+                </label>
+              </div>
+              <label class="input-group">
+                <span>Status</span>
+                <select name="status">
+                  <option value="open">Open</option>
+                  <option value="closed">Closed</option>
+                </select>
+              </label>
+              <button class="btn primary" type="submit">Create Scholarship</button>
+            </form>
+          </section>
+
+          <section class="section-card">
+            <div class="section-head">
+              <div>
+                <h2>Recent Applications</h2>
+                <p class="muted">A quick snapshot of the latest submissions.</p>
+              </div>
+            </div>
+            <div id="recentAdminApplications"></div>
+          </section>
+        </div>
+
+        <section class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>Student Verification</h2>
+              <p class="muted">Verify students so the admin team can keep records organized.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Email</th>
+                  <th>Roll No</th>
+                  <th>Income</th>
+                  <th>City</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="studentsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>All Applications</h2>
+              <p class="muted">Approve, reject, or mark payment completed from this table.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Application</th>
+                  <th>Student</th>
+                  <th>Scholarship</th>
+                  <th>Status</th>
+                  <th>Payment</th>
+                  <th>Document</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminApplicationsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="assets/js/admin.js"></script>
+  </body>
+</html>
+
